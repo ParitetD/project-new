@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Assistant</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+  <h1>Student<span class="highlight">Hub</span></h1>
+  <div class="user-info">Привет, Иван! 👋</div>
+</header>
+
+<main class="main-container">
+
+  <section class="schedule-section">
+    <div class="schedule-header">
+      <h2>🗓️ Расписание</h2>
+      <select id="group-select">
+        <option value="BL-25-9">БЛ-25-9</option>
+        <option value="RI-25-9">РИ-25-9</option>
+      </select>
+    </div>
+
+    <div id="schedule-list" class="schedule-list">
+    </div>
+  </section>
+
+  <div class="right-column">
+    <section class="deadlines-section">
+      <h2>Добавить дедлайн</h2>
+      <form id="deadline-form">
+        <input type="text" id="title" placeholder="Задание" required>
+        <input type="text" id="subject" placeholder="Предмет" required>
+        <input type="date" id="date" required>
+        <button type="submit">Добавить</button>
+      </form>
+
+      <h2>📋 Ближайшие дедлайны</h2>
+      <div id="deadline-list" class="deadline-container"></div>
+    </section>
+
+    <section class="chat-section">
+      <h2>💬 Общий чат</h2>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="message student"><strong>Алексей:</strong> Привет всем! Есть инфа по физике?</div>
+        <div class="message teacher"><strong>Преподаватель:</strong> Лабораторные сдаем до пятницы.</div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Напишите сообщение...">
+        <button id="send-btn">Отправить</button>
+        <button id="go-to-bot" class="btn-primary">Перейти</button>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>
